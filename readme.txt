@@ -1,5 +1,4 @@
-=== errnio Mobile Search – Mobile revenue with no banner advertising ===
-
+=== errnio Mobile Search ===
 Contributors: errnio
 Donate link: 
 Tags: mobile, advertising, ad units, pay per click, PPC, monetise, monetize, gesture, advertizing, banners, make money, search, site search, web search
