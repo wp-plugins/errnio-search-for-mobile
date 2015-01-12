@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The errnio Mobile Search plugin adds a floating search box to your mobile site, which will earn you revenue through any search performed on the site. 
+The errnio Mobile Search plugin adds a floating search box to your mobile site, which will earn you revenue through search performed on the site. 
 
 == Description ==
 
@@ -19,7 +19,6 @@ Demo this on your site in seconds with our cool <a href="http://www.errnio.com" 
 
 = Features =
 Our main features include the following items: 
-
 
 * **Web Search** - a web search box is added to the top of the screen. 
 * **Recommended content** - An additional layer of content and recommended actions is added, labeled "top hits". This serves users with promoted actions and content helping you as a site owner looking to make profit from advertising, to earn revenue off exiting traffic in a seamless and unobtrusive way with no banners or ads.
@@ -98,9 +97,13 @@ We are currently running 3 products, more are available on beta mode. If you'd l
 3. errnio text select tool
 
 == Changelog ==
-**0.1 Beta
-**1.0 version release
+
+0.1 Beta
+
+1.0 version release
 
 == Upgrade Notice ==
-**0.1 beta release
-**1.0 version release
+
+0.1 beta release
+
+1.0 version release
