@@ -18,12 +18,11 @@ Without adding **ads** or **banners**, errnio can enhance your revenue. Make **m
 Demo this on your site in seconds with our cool <a href="http://www.errnio.com" target="_blank">Simulator!</a>
 
 = Features =
-Our main features include the following items:
+Our main features include the following items: 
+
 
 * **Web Search** - a web search box is added to the top of the screen. 
-
 * **Recommended content** - An additional layer of content and recommended actions is added, labeled "top hits". This serves users with promoted actions and content helping you as a site owner looking to make profit from advertising, to earn revenue off exiting traffic in a seamless and unobtrusive way with no banners or ads.
-
 * **Customization** - brand your personal search bar in a selection of colors and added icons, contact us directly for information regarding this. 
 
 The tool enhances mobile engagement of users with additional mobile functionality, to generate added monetization **without banners**, **without ads**. Try us now!
