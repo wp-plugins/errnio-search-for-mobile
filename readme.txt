@@ -9,7 +9,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-errnio mobile search adds a floating search box to your mobile site, which will earn you revenue through any outgoing search performed. The tool enhances mobile engagement of users with additional mobile functionality, to generate added monetization **without banners**, **without ads**. Try us now!
+**errnio mobile search** adds a floating search box to your mobile site, which will earn you revenue through any search performed on the site. 
 
 == Description ==
 
@@ -23,6 +23,8 @@ Our main features include the following items:
 * **Web Search** - a web search box is added to the top of the screen. 
 * **Recommended content** - An additional layer of content and recommended actions is added, labeled "top hits". This serves users with promoted actions and content helping you as a site owner looking to make profit from advertising, to earn revenue off exiting traffic in a seamless and unobtrusive way with no banners or ads.
 * **Customization** - brand your personal search bar in a selection of colors and added icons, contact us directly for information regarding this. 
+
+The tool enhances mobile engagement of users with additional mobile functionality, to generate added monetization **without banners**, **without ads**. Try us now!
 
 = How it Works =
 
