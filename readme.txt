@@ -12,19 +12,20 @@ The errnio Mobile Search plugin adds a floating search box to your mobile site, 
 
 == Description ==
 
-
-The **errnio search box for mobile** adds a new revenue and engagement layer to your site with a simple addition of a plugin. The plugin enables a gesture based search box tool to be added to any mobile browsing session. The box enhances regular browser elements, offering the user a lighter and more agile search box in place of the browser box.  
+The **errnio search box for mobile** enhanced your site search capability by providing users a mobile search box. It also adds a new revenue and engagement layer to your site with a simple addition of a plugin. The plugin enables a gesture based search box tool to be added to any mobile browsing session. The box enhances regular browser elements, offering the user a lighter and more agile search box in place of the browser box.  
 Without adding **ads** or **banners**, errnio can enhance your revenue. Make **more** money from your site with **no more** banners or ads. No more pushy advertising, be part of the revolution.  
 Demo this on your site in seconds with our cool <a href="http://www.errnio.com" target="_blank">Simulator!</a>
 
 = Features =
 Our main features include the following items: 
 
+* **Mobile Site Search** - a simple and mobile enabled search box for your site and domain.
 * **Web Search** - a web search box is added to the top of the screen. 
 * **Recommended content** - An additional layer of content and recommended actions is added, labeled "top hits". This serves users with promoted actions and content helping you as a site owner looking to make profit from advertising, to earn revenue off exiting traffic in a seamless and unobtrusive way with no banners or ads.
 * **Customization** - brand your personal search bar in a selection of colors and added icons, contact us directly for information regarding this. 
 
-The tool enhances mobile engagement of users with additional mobile functionality, to generate added monetization **without banners**, **without ads**. Try us now!
+The tool enhances mobile engagement of users with additional mobile search functionality, to help your users search your site when viewing it on mobile web. 
+We also generate added monetization **without banners**, **without ads**. Try us now! Make sure to sign up via our plug in instructions. 
 
 = How it Works =
 
