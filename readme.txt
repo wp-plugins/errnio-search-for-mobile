@@ -12,7 +12,9 @@ The errnio Mobile Search plugin adds a floating search box to your mobile site, 
 
 == Description ==
 
-The **errnio search box for mobile** enhanced your site search capability by providing users a mobile search box. It also adds a new revenue and engagement layer to your site with a simple addition of a plugin. The plugin enables a gesture based search box tool to be added to any mobile browsing session. The box enhances regular browser elements, offering the user a lighter and more agile search box in place of the browser box.  
+The **errnio search box for mobile** enhances your site search capability by providing users a mobile search box. Our insite search tool help your users reach the right content on your site. 
+
+It also adds a new revenue and engagement layer to your site with a simple addition of a plugin. The plugin enables a gesture based search box tool to be added to any mobile browsing session. The box enhances regular browser elements, offering the user a lighter and more agile search box in place of the browser box.  
 Without adding **ads** or **banners**, errnio can enhance your revenue. Make **more** money from your site with **no more** banners or ads. No more pushy advertising, be part of the revolution.  
 Demo this on your site in seconds with our cool <a href="http://www.errnio.com" target="_blank">Simulator!</a>
 
