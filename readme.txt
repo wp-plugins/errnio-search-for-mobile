@@ -4,7 +4,7 @@ Donate link:
 Tags: mobile, advertising, ad units, pay per click, PPC, monetise, monetize, gesture, advertizing, banners, make money, search, site search, web search
 Requires at least: 3.0
 Tested up to: 4.0.1
-Stable tag: trunk
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,9 +101,12 @@ We are currently running 3 products, more are available on beta mode. If you'd l
 
 == Changelog ==
 
-0.1 Beta
+= 1.1 =
+* Performance improvements and settings page changes
 
-1.0 version release
+= 1.0 =
+* First version release
+
 
 == Upgrade Notice ==
 
