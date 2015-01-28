@@ -5,7 +5,7 @@ Donate link:
 Tags: mobile, advertising, ad units, pay per click, PPC, monetise, monetize, gesture, advertizing, banners, make money, search, site search, web search
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,6 +101,9 @@ We are currently running 3 products, more are available on beta mode. If you'd l
 3. errnio text select tool
 
 == Changelog ==
+
+= 1.2 =
+* Minor fix
 
 = 1.1 =
 * Performance improvements and settings page changes
