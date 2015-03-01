@@ -1,4 +1,4 @@
-===errnio Mobile Site Search===
+===Mobile Web Search Box===
 
 Contributors: errnio
 Donate link: 
