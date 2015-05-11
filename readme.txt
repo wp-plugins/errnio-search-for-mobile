@@ -1,11 +1,10 @@
 ===Mobile Web Search Box===
 
 Contributors: errnio
-Donate link: 
 Tags: mobile, advertising, ad units, pay per click, PPC, monetise, monetize, gesture, advertizing, banners, make money, search, site search, web search
 Requires at least: 3.0
-Tested up to: 4.2
-Stable tag: 1.2
+Tested up to: 4.2.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +101,9 @@ We are currently running 3 products, more are available on beta mode. If you'd l
 
 == Changelog ==
 
+= 1.3 =
+* Register to errnio directly from the plugin settings page
+
 = 1.2 =
 * Minor fix
 
@@ -114,6 +116,12 @@ We are currently running 3 products, more are available on beta mode. If you'd l
 
 == Upgrade Notice ==
 
-0.1 beta release
+1.3 Register to errnio directly from the plugin settings page
+
+1.2 Minor fix
+
+1.1 Performance improvements and settings page changes
 
 1.0 version release
+
+0.1 beta release
