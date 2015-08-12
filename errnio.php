@@ -2,7 +2,7 @@
 /*
 Plugin Name: Searchy by errnio
 Plugin URI: http://errnio.com
-Description: The errnio Mobile Web Search plugin adds a floating search box to your mobile site, creating far better engagement and new monetization for your site. 
+Description: The errnio Mobile Web Search plugin adds a floating search box to your mobile site, creating far better engagement and new monetization for your site.
 Version: 2.0
 Author: Errnio
 Author URI: http://errnio.com
@@ -14,6 +14,9 @@ define('SEARCHY_BY_ERRNIO_INSTALLER_NAME', 'wordpress_searchy_by_errnio');
 
 define('SEARCHY_BY_ERRNIO_OPTION_NAME_TAGID', 'errnio_id');
 define('SEARCHY_BY_ERRNIO_OPTION_NAME_TAGTYPE', 'errnio_id_type');
+
+define('SEARCHY_BY_ERRNIO_OPTION_NAME_TAGID_LEGACY', 'errnio_api');
+define('SEARCHY_BY_ERRNIO_OPTION_NAME_TAGTYPE_LEGACY', 'errnio_api_type');
 
 define('SEARCHY_BY_ERRNIO_EVENT_NAME_ACTIVATE', 'wordpress_activated');
 define('SEARCHY_BY_ERRNIO_EVENT_NAME_DEACTIVATE', 'wordpress_deactivated');
@@ -59,18 +62,40 @@ function searchy_by_errnio_create_tagid() {
 	 	add_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGTYPE, SEARCHY_BY_ERRNIO_TAGTYPE_TEMP);
 		return $tagId;
 	}
-	
+
 	return NULL;
+}
+
+function searchy_by_errnio_convert_legacy_options() {
+	$tagtype = get_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGTYPE_LEGACY);
+	$tagId = get_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGID_LEGACY);
+
+	// This is to make sure these are not empty
+	if ($tagtype == SEARCHY_BY_ERRNIO_TAGTYPE_PERM || $tagtype == SEARCHY_BY_ERRNIO_TAGTYPE_TEMP) {
+		add_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGID, $tagId);
+		add_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGTYPE, $tagtype);
+	}
+
+	if ($tagtype == SEARCHY_BY_ERRNIO_TAGTYPE_PERM) {
+		return false;
+	} else if ($tagtype == SEARCHY_BY_ERRNIO_TAGTYPE_TEMP) {
+		return true;
+	}
 }
 
 function searchy_by_errnio_check_need_register() {
 	$tagtype = get_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGTYPE);
 	$needregister = true;
-	
+
 	if ($tagtype == SEARCHY_BY_ERRNIO_TAGTYPE_PERM) {
 		$needregister = false;
+	} else if ($tagtype == SEARCHY_BY_ERRNIO_TAGTYPE_TEMP) {
+		$needregister = true;
+	} else {
+		// No such options - need to check legacy
+		$needregister = searchy_by_errnio_convert_legacy_options();
 	}
-	
+
 	return $needregister;
 }
 
@@ -79,7 +104,7 @@ function searchy_by_errnio_check_need_register() {
 function searchy_by_errnio_activate() {
 	if ( ! current_user_can( 'activate_plugins' ) )
 	        return;
-	
+
 	$tagId = get_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGID);
 
 	if ( $tagId === FALSE || empty($tagId) ) {
@@ -88,7 +113,7 @@ function searchy_by_errnio_activate() {
 	} else {
 		// Previously activated - meaning tagType + tagId should exists
 	}
-	
+
 	// Send event - activated
 	searchy_by_errnio_send_event(SEARCHY_BY_ERRNIO_EVENT_NAME_ACTIVATE);
 }
@@ -96,7 +121,7 @@ function searchy_by_errnio_activate() {
 function searchy_by_errnio_deactivate() {
 	if ( ! current_user_can( 'activate_plugins' ) )
 	        return;
-	
+
 	// Send event - deactivated
 	searchy_by_errnio_send_event(SEARCHY_BY_ERRNIO_EVENT_NAME_DEACTIVATE);
 }
@@ -106,8 +131,8 @@ function searchy_by_errnio_uninstall() {
 	        return;
 
 	// Send event - uninstall
-	searchy_by_errnio_send_event(SEARCHY_BY_ERRNIO_EVENT_NAME_UNINSTALL);	
-	
+	searchy_by_errnio_send_event(SEARCHY_BY_ERRNIO_EVENT_NAME_UNINSTALL);
+
 	delete_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGID);
 	delete_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGTYPE);
 }
@@ -184,7 +209,7 @@ function searchy_by_errnio_add_settings_link_on_plugin($links, $file) {
 function searchy_by_errnio_admin_notice() {
 	$needregister = searchy_by_errnio_check_need_register();
 	$settingsurl = admin_url( 'admin.php?page=errnio-options' );
-	
+
 	if($needregister){
 		echo('<div style="font-weight: bold; background-color: #7ad03a; padding: 1px 12px; box-shadow: 0 1px 1px 0 rgba(0,0,0,.1); margin: 5px 0 15px;"><p style="font-size: 14px;">Please register your site in the errnio settings section <a href="'.$settingsurl.'">here</a></p></div>');
 	}
