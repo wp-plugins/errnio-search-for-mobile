@@ -1,4 +1,4 @@
-===Mobile Web Search by errnio===
+===Wordpress Mobile Web Search by errnio===
 
 Contributors: errnio
 Tags: mobile, search, advertising, ad units, pay per click, PPC, monetise, monetize, gesture, advertizing, banners, make money, site search, web search, mobile friendly, mobile optimization,
@@ -8,11 +8,11 @@ Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The errnio Mobile Web Search plugin adds a floating search box to your mobile site, creating far better engagement and new monetization for your site.
+The errnio Wordpress Mobile Web Search plugin adds a floating search box to your mobile site, creating far better engagement and new monetization for your site.
 
 == Description ==
 
-**errnio Mobile Web Search** enhances your site user experience while helping you take control of mobile search, by providing users a mobile search box, which you as a publisher can customize and make use of. Our insite search tool also helps your users reach the right content on your site. The box enhances regular browser elements, offering the user a lighter and more agile search box in place of the browser box.
+**errnio Wordpress Mobile Web Search** enhances your site user experience while helping you take control of mobile search, by providing users a mobile search box, which you as a publisher can customize and make use of. Our insite search tool also helps your users reach the right content on your site. The box enhances regular browser elements, offering the user a lighter and more agile search box in place of the browser box.
 
 The plugin adds a new revenue and engagement layer to your site with a simple installation process. Without adding **ads** or **banners**, errnio can enhance your revenue. Make **more** money from your site with **no more** banners or ads. No more pushy advertising, be part of the revolution.
 
