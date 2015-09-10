@@ -15,7 +15,7 @@
         <span class="inputMsg verifyPassword"></span>
         <button id="submitRegister" type="button">Go!</button>
       </div>
-      <h2>Already have your Site Id? <a id="iHaveId" href="#">Enter it here</a></h2>
+      <h2>Already have your errnio Id? <a id="iHaveId" href="#">Enter it here</a></h2>
     </div>
     <div class="footer">
       <div class="support-wrapper center">
@@ -28,10 +28,10 @@
   </div>
   <div id="enterid" class="modal">
     <div class="container">
-      <h1>Enter your Id here:</h1>
+      <h1>Enter your errnio Id here:</h1>
 
       <div class="fields">
-        <input id="siteIdInput" type="text" placeholder="Site Id" tabindex="1">
+        <input id="siteIdInput" type="text" placeholder="errnio Id" tabindex="1">
         <span class="inputMsg siteid"></span>
         <button id="submitSiteId" type="button">Go!</button>
       </div>
