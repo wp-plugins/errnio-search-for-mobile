@@ -232,8 +232,6 @@ function searchy_by_errnio_admin_page() {
 		$needregister = searchy_by_errnio_check_need_register();
 		$tagId = get_option(SEARCHY_BY_ERRNIO_OPTION_NAME_TAGID);
 
-		echo '<h2>Errnio Options</h2>';
-
 		if (!$needregister) {
 			echo '<div class="errnio-settings-screen"><div class="errnio-settings-header2"><div class="container-fluid no-padding max-size"><div class="col-sm-4 col-md-4 col-lg-4"><h1>Welcome</h1></div></div></div><div class="errnio-settings-middle"><div class="container-fluid no-padding max-size"><div class="col-sm-12 col-md-12 col-lg-12"><div class="errnio-info"><br/><p>Your new errnio plugin is up and running.<br/>For configuration and reports please visit your dashboard at <a href="http://brutus.errnio.com/">brutus.errnio.com</a></p></div></div></div></div><div class="errnio-settings-footer"><p>Having trouble? contact us: <a href="mailto:support@errnio.com">support@errnio.com</a></p><a class="errnio-settings-logo" href="http://errnio.com" target="_blank"></a></div></div>';		} else {
 			if ($tagId) {
