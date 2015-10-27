@@ -4,7 +4,7 @@ Contributors: errnio
 Tags: mobile, search, advertising, ad units, pay per click, PPC, monetise, monetize, gesture, advertizing, banners, make money, site search, web search, mobile friendly, mobile optimization,
 Requires at least: 3.0
 Tested up to: 4.3
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,6 +118,10 @@ support@errnio.com
 
 == Changelog ==
 
+= 2.1 =
+
+* New errnio settings page and admin notice designs
+
 = 2.0 =
 * New and improved plugin
 
@@ -135,6 +139,8 @@ support@errnio.com
 
 
 == Upgrade Notice ==
+
+2.1 New and improved errnio settings page and admin notice design
 
 2.0 Complete plugin overhaul
 
