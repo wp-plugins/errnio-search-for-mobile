@@ -3,7 +3,7 @@
 Plugin Name: Searchy by errnio
 Plugin URI: http://errnio.com
 Description: The errnio Mobile Web Search plugin adds a floating search box to your mobile site, creating far better engagement and new monetization for your site.
-Version: 2.1
+Version: 2.1.1
 Author: Errnio
 Author URI: http://errnio.com
 */
@@ -181,9 +181,9 @@ add_action('wp_enqueue_scripts', 'searchy_by_errnio_load_client_script', 99999 )
 function searchy_by_errnio_add_settings_menu_option() {
     add_menu_page (
         'Errnio Options',   //page title
-        'Errnio Settings',  //menu title
+        'Searchy Settings',  //menu title
         'manage_options',   //capability
-        'errnio-options',   //menu_slug
+        'errnio-options-searchy',   //menu_slug
         'searchy_by_errnio_admin_page',  //function
         plugin_dir_url( __FILE__ ) . '/assets/img/errnio-icon.png'  //icon_url
         //There is another parameter - position
@@ -198,7 +198,7 @@ function searchy_by_errnio_add_settings_link_on_plugin($links, $file) {
     }
 
     if ($file == $this_plugin) {
-		$adminpage_url = admin_url( 'admin.php?page=errnio-options' );
+		$adminpage_url = admin_url( 'admin.php?page=errnio-options-searchy' );
         $settings_link = '<a href="'.$adminpage_url.'">Settings</a>';
         array_unshift($links, $settings_link);
     }
@@ -209,7 +209,7 @@ function searchy_by_errnio_add_settings_link_on_plugin($links, $file) {
 function searchy_by_errnio_admin_notice() {
 	global $hook_suffix;
 	$needregister = searchy_by_errnio_check_need_register();
-	$settingsurl = admin_url( 'admin.php?page=errnio-options' );
+	$settingsurl = admin_url( 'admin.php?page=errnio-options-searchy' );
 
 	if($hook_suffix == 'plugins.php' && $needregister){
 		echo("<div class='updated' style='border-radius: 3px;padding: 10px 12px;border-color: #4DB6AC;background-color: #81D8D0;box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);'><h3 style='color:#555;'>Congratulations! Your Mobile Web Search plugin is up and running. For more options and features you're welcome to register <a href='".$settingsurl."' style='color: #ECFFFD;text-decoration:underline;'>here</a></h3></div>");
