@@ -8,7 +8,7 @@ Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The errnio Wordpress Mobile Web Search plugin adds a floating search box to your mobile site, creating far better search experience for mobile, and opens up new monetization stream.
+The errnio Wordpress Mobile Web Search plugin adds a floating search box to your site, creating far better search experience for mobile.
 
 == Description ==
 

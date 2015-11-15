@@ -2,7 +2,7 @@
 /*
 Plugin Name: Searchy by errnio
 Plugin URI: http://errnio.com
-Description: The errnio Mobile Web Search plugin adds a floating search box to your mobile site, creating far better engagement and new monetization for your site.
+Description: The errnio Wordpress Mobile Web Search plugin adds a floating search box to your site, creating far better search experience for mobile.
 Version: 2.1.1
 Author: Errnio
 Author URI: http://errnio.com
