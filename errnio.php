@@ -3,7 +3,7 @@
 Plugin Name: Searchy by errnio
 Plugin URI: http://errnio.com
 Description: The errnio Wordpress Mobile Web Search plugin adds a floating search box to your site, creating far better search experience for mobile.
-Version: 2.2
+Version: 2.3
 Author: Errnio
 Author URI: http://errnio.com
 */
@@ -143,6 +143,30 @@ register_uninstall_hook( __FILE__, 'searchy_by_errnio_uninstall' );
 
 /***** Client side script load ******/
 
+function searchy_by_errnio_get_first_post_image( $postID ) {
+    $args = array(
+    'numberposts' => 1,
+    'order' => 'ASC',
+    'post_mime_type' => 'image',
+    'post_parent' => $postID,
+    'post_status' => null,
+    'post_type' => 'attachment',
+    );
+
+    $attachments = get_children( $args );
+    if ( $attachments ) {
+        foreach ( $attachments as $attachment ) {
+            $image_attributes = wp_get_attachment_image_src( $attachment->ID, 'thumbnail' )?
+                wp_get_attachment_image_src( $attachment->ID, 'thumbnail' ) : wp_get_attachment_image_src( $attachment->ID, 'full' );
+            if ($image_attributes) {
+                return $image_attributes[0];
+            } else {
+                return null;
+            }
+        }
+    }
+}
+
 function searchy_by_errnio_load_client_script() {
 	$list = 'enqueued';
 	$handle = 'errnio_script';
@@ -162,6 +186,34 @@ function searchy_by_errnio_load_client_script() {
 		$script_url = "//service.errnio.com/loader?tagid=".$tagId;
 		wp_register_script($handle, $script_url, false, '1.0', true);
 		wp_enqueue_script($handle );
+
+		$prev_post = get_adjacent_post( false, '', true);
+		$next_post = get_adjacent_post( false, '', false);
+		$posts_obj = array();
+
+		if ( !empty($next_post) ) {
+			$next_post_obj = array();
+			$next_post_obj['title'] = $next_post->post_title;
+			$next_post_obj['clickUrl'] = get_permalink( $next_post->ID );
+			$next_post_thumb = searchy_by_errnio_get_first_post_image($next_post->ID);
+			if ($next_post_thumb) {
+				$next_post_obj['thumbnailUrl'] = $next_post_thumb;
+			}
+			$posts_obj['nextPage'] = $next_post_obj;
+		}
+		if ( !empty($prev_post) ) {
+			$prev_post_obj = array();
+			$prev_post_obj['title'] = $prev_post->post_title;
+			$prev_post_obj['clickUrl'] = get_permalink( $prev_post->ID );
+
+			$prev_post_thumb = searchy_by_errnio_get_first_post_image($prev_post->ID);
+			if ($prev_post_thumb) {
+				$prev_post_obj['thumbnailUrl'] = $prev_post_thumb;
+			}
+			$posts_obj['previousPage'] = $prev_post_obj;
+		}
+
+		wp_localize_script($handle, '_errniowp', $posts_obj);
 	}
 }
 
