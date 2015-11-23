@@ -3,7 +3,7 @@
 Plugin Name: Searchy by errnio
 Plugin URI: http://errnio.com
 Description: The errnio Wordpress Mobile Web Search plugin adds a floating search box to your site, creating far better search experience for mobile.
-Version: 2.3
+Version: 2.3.1
 Author: Errnio
 Author URI: http://errnio.com
 */
@@ -24,6 +24,8 @@ define('SEARCHY_BY_ERRNIO_EVENT_NAME_UNINSTALL', 'wordpress_uninstalled');
 
 define('SEARCHY_BY_ERRNIO_TAGTYPE_TEMP', 'temporary');
 define('SEARCHY_BY_ERRNIO_TAGTYPE_PERM', 'permanent');
+
+define('SEARCHY_BY_ERRNIO_OPTION_NAME_NOTIFICATION', 'errnio_notification_status');
 
 /***** Utils ******/
 
@@ -124,6 +126,8 @@ function searchy_by_errnio_deactivate() {
 
 	// Send event - deactivated
 	searchy_by_errnio_send_event(SEARCHY_BY_ERRNIO_EVENT_NAME_DEACTIVATE);
+
+	delete_option(SEARCHY_BY_ERRNIO_OPTION_NAME_NOTIFICATION);
 }
 
 function searchy_by_errnio_uninstall() {
@@ -263,9 +267,24 @@ function searchy_by_errnio_admin_notice() {
 	$needregister = searchy_by_errnio_check_need_register();
 	$settingsurl = admin_url( 'admin.php?page=errnio-options-searchy' );
 
-	if($hook_suffix == 'plugins.php' && $needregister){
-		echo("<div class='updated' style='border-radius: 3px;padding: 10px 12px;border-color: #4DB6AC;background-color: #81D8D0;box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);'><h3 style='color:#555;'>Congratulations! Your Mobile Web Search plugin is up and running. For more options and features you're welcome to register <a href='".$settingsurl."' style='color: #ECFFFD;text-decoration:underline;'>here</a></h3></div>");
+	$shouldshow = get_option(SEARCHY_BY_ERRNIO_OPTION_NAME_NOTIFICATION);
+
+	if($hook_suffix == 'plugins.php' && $needregister && $shouldshow != 'hide'){
+		$plugin_name = "Mobile Web Search";
+		$message_id = "mobile-web-search-errnio";
+		$class = "activated errnio-notice notice is-dismissible";
+		$message = "Congratulations! Your ".$plugin_name." plugin is up and running. For more options and features you're welcome to register <a href='".$settingsurl."' style='color: #ECFFFD;text-decoration:underline;'>here</a>";
+	    echo "<div id=\"$message_id\" class=\"$class\" style='border-radius: 3px;border-color: #4DB6AC;background-color: #81D8D0;box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);'> <p style='color:#555;font-weight:bold;font-size:110%;'>$message</p></div>";
+
+		$jshandle = 'errnio-admin-js';
+		wp_register_script($jshandle, plugins_url('assets/js/errnio-admin.js', __FILE__), array('jquery'));
+		wp_enqueue_script($jshandle);
+		wp_localize_script($jshandle, 'errniowp', array('ajax_url' => admin_url( 'admin-ajax.php' )));
 	}
+}
+
+function searchy_by_errnio_close_notification() {
+	add_option(SEARCHY_BY_ERRNIO_OPTION_NAME_NOTIFICATION, 'hide');
 }
 
 function searchy_by_errnio_admin_page() {
@@ -318,3 +337,5 @@ add_action('admin_menu', 'searchy_by_errnio_add_settings_menu_option');
 add_filter('plugin_action_links', 'searchy_by_errnio_add_settings_link_on_plugin', 10, 2);
 add_action('admin_notices', 'searchy_by_errnio_admin_notice');
 add_action('wp_ajax_searchy_by_errnio_register', 'searchy_by_errnio_register_callback');
+
+add_action('wp_ajax_searchy_by_errnio_close_notification', 'searchy_by_errnio_close_notification');

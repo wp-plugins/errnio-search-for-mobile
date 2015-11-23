@@ -4,7 +4,7 @@ Contributors: errnio
 Tags: mobile, search, advertising, ad units, pay per click, PPC, monetise, monetize, gesture, advertizing, banners, make money, site search, web search, mobile friendly, mobile, toolbar, optimization, better search,
 Requires at least: 3.0
 Tested up to: 4.3
-Stable tag: 2.3
+Stable tag: 2.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,6 +117,9 @@ info@errnio.com
 
 == Changelog ==
 
+= 2.3.1 =
+* Added X to notification bar in plugins page
+
 = 2.3 =
 * Important update. Using wordpress API to allow errnio plugin to support any features turned on in errnio control panel
 
@@ -143,6 +146,8 @@ info@errnio.com
 
 
 == Upgrade Notice ==
+
+2.3.1 Added X to notification bar in plugins page
 
 2.3 Important update. Using wordpress API to allow errnio plugin to support any features turned on in errnio control panel
 
